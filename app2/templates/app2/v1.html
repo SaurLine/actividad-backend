@@ -1,2 +1,20 @@
 {% extends 'base.html' %}
 {% block title %}Vista 1{% endblock %}
+{% block content %}
+          <h2 class="mt-5">Lista elementos</h2>
+          <div class="table-responsive small">
+            <table class="table table-striped table-sm">
+              <thead>
+                <tr>
+                  <th scope="col">Id</th>
+                  <th scope="col">Nombre</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for e in elementos %}
+                <tr>
+                  <td>{{e.id}}</td>
+                  <td>{{e.nombre}}</td>
+                </tr>
+                {% endfor %}
+{% endblock %}

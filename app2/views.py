@@ -8,4 +8,4 @@ def vista1(request):
         {"id": 2, "nombre": "elemento 2"}
     ]
 
-    return render(request, "app2/v1.html")
+    return render(request, "app2/v1.html", {"elementos": lista_elemento})
